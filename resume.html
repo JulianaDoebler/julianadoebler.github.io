@@ -10,9 +10,45 @@
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.sidebar {
-    position: fixed;
-  }
+
+.fixed {
+  position: fixed;
+}
+
+.navbar { /*navbar*/
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 999;
+}
+
+.navbar a { /* Links inside the navbar */
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover { /* Change background on mouse-over */
+    background: #ddd;
+    color: black;
+}
+
+.links a{ /* Links inside */
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline;
+}
+.links a:hover { /* Change background on mouse-over */
+    color: black;
+}
+
+
 </style>
 <body class="w3-light-grey">
 
@@ -20,64 +56,88 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
+
+  <!-- gonna try to make a navbar -->
+  <div class="w3-row" id="top">
+    <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#top">Resume</a>
+    <a href="designmanifest.html">Design Manifesto</a>
+    </div>
+    <br><br>
+  </div>
+
+<!-- quick links for resume -->
+  <div class="w3-row-padding">
+    <div class="w3-col m1"><p></p></div>
+
+    <div class="w3-col m11"> <!-- not sure about this spacing stay tuned -->
+      <div class="w3-container w3-card w3-teal w3-margin-bottom w3-center">
+        <h3>Resume Quick Links</h3>
+        <div class = "links">
+          <a href="#skill">Skills</a>
+          <a href="#expierence">Experience</a>
+          <a href="#education">Education</a>
+        </div><br>
+      </div>
+    </div>
+
+  </div>
+
   <div class="w3-row-padding">
 
-    <!-- Left Column -->
-    <div class="w3-third">
 
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="me.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-white">
-            <h2>Juliana Doebler</h2>
+<!-- new row..? -->
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="me.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-white">
+              <h2>Juliana Doebler</h2>
+            </div>
           </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Computer Sciencer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Richmond, VA</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>juliana.doebler@gmail.com</p>
-          <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p> -->
-          <hr>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Computer Sciencer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Richmond, VA</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>juliana.doebler@gmail.com</p>
+            <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p> -->
+            <hr>
+            <p id="skill" class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p>Adobe Photoshop</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+            </div>
+            <p>Photography</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                <div class="w3-center w3-text-white">80%</div>
+              </div>
+            </div>
+            <p>Illustrator</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+            </div>
+            <p>Media</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+            </div>
+            <br>
+          </div>
+        </div><br>
 
-          <p class="w3-large"><b><i></i>Go To</b></p>
-          <a href = "index.html"> Home</a>
+      <!-- End Left Column -->
+      </div>
 
-          <br>
 
-          <br>
-        </div>
-      </div><br>
-
-    <!-- End Left Column -->
-    </div>
 
     <!-- Right Column -->
-    <div class="w3-twothird">
+     <div class="w3-twothird">
 
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-      <p>Adobe Photoshop</p>
-      <div class="w3-light-grey w3-round-xlarge w3-small">
-        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-      </div>
-      <p>Photography</p>
-      <div class="w3-light-grey w3-round-xlarge w3-small">
-        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-          <div class="w3-center w3-text-white">80%</div>
-        </div>
-      </div>
-      <p>Illustrator</p>
-      <div class="w3-light-grey w3-round-xlarge w3-small">
-        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-      </div>
-      <p>Media</p>
-      <div class="w3-light-grey w3-round-xlarge w3-small">
-        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-      </div>
-      <br>
-    </div>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <div class="w3-container w3-card w3-white w3-margin-bottom" id="expierence">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
@@ -98,7 +158,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 
-      <div class="w3-container w3-card w3-white">
+      <div class="w3-container w3-card w3-white" id="education">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
@@ -130,12 +190,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
   <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <i class="fab fa-facebook-square w3-hover-opacity"></i>
+  <i class="fab fa-instagram w3-hover-opacity"></i>
+  <i class="fab fa-snapchat-square w3-hover-opacity"></i>
+  <i class="fab fa-pinterest-square w3-hover-opacity"></i>
+  <i class="fab fa-twitter-square w3-hover-opacity"></i>
+  <i class="fab fa-linkedin w3-hover-opacity"></i>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 

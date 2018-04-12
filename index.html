@@ -10,46 +10,72 @@
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+.navbar { /*navbar*/
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 999;
+}
+
+.navbar a { /* Links inside the navbar */
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover { /* Change background on mouse-over */
+    background: #ddd;
+    color: black;
+}
+img {
+  width: 25%;
+  float: left;
+}
+
 </style>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
+
+
   <!-- The Grid -->
+  <!-- gonna try to make a navbar -->
+  <div class="w3-row" id="top">
+    <div class="navbar">
+    <a href="#top">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="designmanifest.html">Design Manifesto</a>
+    </div>
+    <br><br><br>
+  </div>
+
   <div class="w3-row-padding">
 
-    <!-- Left Column -->
-    <div class="w3-third">
+    <!-- not sure I love this set up rn erg-->
+    <div class="w3-col m1"><p></p></div>
 
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="me.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-white">
-            <h2>Juliana Doebler</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Computer Sciencer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Richmond, VA</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>juliana.doebler@gmail.com</p>
-          <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p> -->
-          <hr> <!-- adds a line seperating sections -->
-
-          <p class="w3-large"><b><i></i>Go To</b></p>
-          <a href = "resume.html"> Resume</a>
-
-          <br> <!-- puts that nice break in -->
-
-          <br>
+    <div class="w3-container w3-card w3-margin-bottom w3-center w3-white">
+      <div style="text-align:center;">
+        <h2 style="font-size:5vw;">Juliana Doebler</h2>
+        <div style="color: black; text-align:left; display: inline-block; font-size:2vw;">
+          <span><i class="fa fa-briefcase fa-fw w3-margin-left w3-large w3-text-teal"></i>Computer Sciencer
+          <i class="fa fa-home fa-fw w3-margin-left w3-large w3-text-teal"></i>Richmond, VA
+          <i class="fa fa-envelope fa-fw w3-margin-left w3-large w3-text-teal"></i>juliana.doebler@gmail.com</span>
         </div>
       </div><br>
+    </div><br>
 
-    <!-- End Left Column -->
-    </div>
 
     <!-- Right Column -->
-    <div class="w3-twothird">
+    <div class="w3-twothird" style ="margin-left: 20%">
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-poo fa-fw w3-margin-right w3-xxxlarge w3-text-teal"></i>About Me</h2>
@@ -104,12 +130,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
   <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <i class="fab fa-facebook-square w3-hover-opacity"></i>
+  <i class="fab fa-instagram w3-hover-opacity"></i>
+  <i class="fab fa-snapchat-square w3-hover-opacity"></i>
+  <i class="fab fa-pinterest-square w3-hover-opacity"></i>
+  <i class="fab fa-twitter-square w3-hover-opacity"></i>
+  <i class="fab fa-linkedin w3-hover-opacity"></i>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
