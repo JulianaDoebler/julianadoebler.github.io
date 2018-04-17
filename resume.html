@@ -50,7 +50,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
 </style>
-<body class="w3-light-grey">
+<body class="w3-light-grey" onresize="myFunction()">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -71,7 +71,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <div class="w3-row-padding">
     <div class="w3-col m1"><p></p></div>
 
-    <div class="w3-col m11"> <!-- not sure about this spacing stay tuned -->
+    <div class="w3-col m10"> <!-- not sure about this spacing stay tuned -->
       <div class="w3-container w3-card w3-teal w3-margin-bottom w3-center">
         <h3>Resume Quick Links</h3>
         <div class = "links">
@@ -89,17 +89,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <!-- new row..? -->
 
-      <!-- Left Column -->
-      <div class="w3-col" style="min-width:200px; max-width:23%;">
+      <!-- Left Column   style="min-width:200px; max-width:23%;" -->
+      <div class="w3-col"  style="min-width:170px; max-width:23%;">
 
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
             <img src="me.jpg" style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-white">
-              <h2>Juliana Doebler</h2>
+              <h2 style="font-size:2.5vw;">Juliana Doebler</h2>
             </div>
           </div>
-          <div class="w3-container">
+          <div class="w3-container" style="word-wrap: break-word;">
             <p><i class="fa fa-briefcase fa-fw w3-large w3-text-teal" style = "margin-right:5px;"></i>Computer Sciencer</p>
             <p><i class="fa fa-home fa-fw w3-large w3-text-teal" style = "margin-right:5px;"></i>Richmond, VA</p>
             <p><i class="fa fa-envelope fa-fw w3-large w3-text-teal" style = "margin-right:5px;"></i>juliana.doebler@gmail.com</p>
@@ -132,8 +132,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
 
-    <!-- Right Column -->
-     <div class="w3-col" style ="min-width:10%; max-width: 77%">
+    <!-- Right Column    style ="min-width: 10%; max-width: 77%" -->
+     <div class="w3-col" style ="min-width: 10%; max-width: 77%">
 
 
       <div class="w3-container w3-card w3-white w3-margin-bottom" id="expierence">
@@ -201,3 +201,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 </body>
 </html>
+<script>
+function myFunction() {
+  if(window.innerWidth < 650)
+  {
+    document.getElementById("lCol").style.width = "100%";
+    document.getElementById("w").innerHTML = window.innerWidth+" 100%"
+  } else {
+    document.getElementById("lCol").style.width = "25%";
+    document.getElementById("lCol").style.mWidth = "200px";
+    document.getElementById("w").innerHTML = window.innerWidth+" 25%"
+  }
+}
+
+
+</script>
