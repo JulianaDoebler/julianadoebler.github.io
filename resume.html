@@ -69,18 +69,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <br><br>
   </div>
 
+
 <!-- quick links for resume -->
   <div class="w3-row-padding">
     <div class="w3-col m1"><p></p></div>
 
     <div class="w3-col m10"> <!-- not sure about this spacing stay tuned -->
       <div class="w3-container w3-card w3-teal w3-margin-bottom w3-center">
-        <h3>Resume Quick Links</h3>
-        <div class = "links">
-          <a href="#skill">Skills</a>
-          <a href="#expierence">Experience</a>
-          <a href="#education">Education</a>
-        </div><br>
+        <h2>Resume</h2>
       </div>
     </div>
 
@@ -109,32 +105,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
               <hr>
             </div>
           </div>
-
-          <div class="w3-container" id="cont2" style="word-wrap: break-word;">
-            <p id="skill" class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-            <p>Adobe Photoshop</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-            </div>
-            <p>Photography</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-                <div class="w3-center w3-text-white">80%</div>
-              </div>
-            </div>
-            <p>Illustrator</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-            </div>
-            <p>Media</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-            </div>
-            <br>
+          <div class="w3-container" id="cont2" >
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Activities</b></p>
+            <ul>
+              <li>ACM Competitive Programming Club</li>
+              <li>Phi Sigma Pi Honor Fraternity</li>
+            </ul>
+            <hr>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>References</b></p>
+            <p>Avaliable upon request</p>
           </div>
-
         </div><br>
       </div>
+
 
 
       <div class ="w3-col" id="obj">
@@ -156,6 +139,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 
+      <div class ="w3-col" id="skill">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-black" style="text-align:center;">Skills</h2>
+          <ul>
+            <li>Proficient in Java, C</li>
+            <li>Beginner in Python, SQLite, Ruby, SQL</li>
+            <li>Familiar with Windows and Linux command line, Eclipse</li>
+            <li>Proficient in Microsoft Word, PowerPoint, Excel, Access</li>
+          </ul>
+          <br>
+        </div>
+      </div>
 
     <!-- Right Column    style ="min-width: 10%; max-width: 77%" -->
      <div class="w3-col" id="expierence">
@@ -220,6 +215,8 @@ function myFunction() {
 
     document.getElementById("expierence").style.maxWidth = "100%";
     document.getElementById("education").style.maxWidth = "100%";
+    document.getElementById("skill").style.maxWidth = "100%";
+
 
     document.getElementById("obj").style.maxWidth = "100%";
   } else {
@@ -236,6 +233,9 @@ function myFunction() {
     document.getElementById("expierence").style.minWidth = "10%";
     document.getElementById("education").style.maxWidth = "76%";
     document.getElementById("education").style.minWidth = "10%";
+
+    document.getElementById("skill").style.maxWidth = "76%";
+    document.getElementById("skill").style.minWidth = "10%";
 
     document.getElementById("obj").style.maxWidth = "76%";
     document.getElementById("obj").style.minWidth = "10%";
